@@ -69,10 +69,6 @@ public class UI {
 		}
 	}
 		
-
-
-	
-	
 	public static void printBoard(ChessPiece[][] pieces) {
 		for (int i=0; i<pieces.length; i++) {
 			System.out.print((8 - i) + " ");
@@ -83,7 +79,7 @@ public class UI {
 		}
 		System.out.println("  a b c d e f g h");
 	}
-	//
+
 	public static void printBoard(ChessPiece[][] pieces, boolean[][] possibleMoves) {
 		for (int i=0; i<pieces.length; i++) {
 			System.out.print((8 - i) + " ");
@@ -118,7 +114,7 @@ public class UI {
 		List<ChessPiece> black = captured.stream().filter(x -> x.getColor() == Color.BLACK).collect(Collectors.toList());
 		
 		System.out.println("Captured pieces:");
-		System.out.print("While: ");
+		System.out.print("White: ");
 		System.out.print(ANSI_YELLOW);
 		System.out.println(Arrays.toString(white.toArray()));
 		System.out.print(ANSI_RESET);
